@@ -1,0 +1,38 @@
+<div class="holder">
+  <table *ngIf="portfolio.stocks.length != 0">
+    <tr class="heading">
+      <th>Symbol</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Value</th>
+      <th width="100px"></th>
+    </tr>
+    <tr class="data" *ngFor="let stock of portfolio.stocks">
+      <td>{{stock.symbol}}</td>
+      <td>{{stock.buyPrice | number: '.2'}}</td>
+      <td>{{stock.quantity | number}}</td>
+      <td>{{stock.buyPrice * stock.quantity | number: '.2'}}</td>
+      <td><input class="btn-remove" type="button" value="Remove" (click)="removeStock(stock.symbol)"/></td>
+    </tr>
+    <tr>
+      <td>Total</td>
+      <td></td>
+      <td></td>
+      <td>{{totalValue() | number: '.2'}}</td>
+      <td></td>
+    </tr>
+  </table>
+  <div class="empty-portfolio" *ngIf="portfolio.stocks.length == 0">
+    No Stocks Currently In Portfolio.
+  </div>
+</div>
+<div class="adder">
+  <table>
+    <tr>
+      <td><input [(ngModel)]="newSymbol" class="text-box" type="text" placeholder="Symbol"/></td>
+      <td><input [(ngModel)]="newPrice" class="text-box" type="number" placeholder="Price" value="0"/></td>
+      <td><input [(ngModel)]="newQuantity" class="text-box" type="number" placeholder="Quantity" value="0"/></td>
+      <td><input class="btn" type="button" value="Add To Portfolio" (click)="addStock()"/></td>
+    </tr>
+  </table>
+</div>
