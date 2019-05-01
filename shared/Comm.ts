@@ -4,7 +4,7 @@ export class MSG {
     stringify() {
         return JSON.stringify(this)
     }
-    static validate(o) {
+    static validate(o: object) {
         return true
     }
 }

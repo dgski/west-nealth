@@ -1,5 +1,4 @@
 export class Stock {
-
     symbol: string
     buyPrice: number
     quantity: number
@@ -17,7 +16,6 @@ export class Stock {
     }
 }
 export class Portfolio {
-
     stocks: Array<Stock>
 
     constructor() {
