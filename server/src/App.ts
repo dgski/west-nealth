@@ -36,7 +36,6 @@ function handleGetPortfolio(req: express.Request, res: express.Response) : void 
     console.log(req.body)
     
     if(!comm.GET_PORTFOLIO_MSG.validate(req.body)) {
-        console.log(req.body)
         let errorMsg = new comm.ERROR_MSG(comm.ErrorCode.InvalidRequest)
         errorMsg.log()
         res.status(404).send(errorMsg.stringify())

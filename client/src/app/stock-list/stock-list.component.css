@@ -24,6 +24,19 @@ table {
     width: 100%;
 }
 
+.data {
+    animation: row-grow 0.5s;
+}
+
+@keyframes row-grow {
+    from {
+      transform: scaleY(0);
+    }
+    to {
+      transform: scaleY(1);
+    }
+  }
+
 tr.data:hover {
     background-color: ghostwhite;
 }
