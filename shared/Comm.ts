@@ -103,6 +103,12 @@ export class ERROR_MSG extends MSG {
         super()
         this.errorCode = errorCode
     }
+
+    static validate(o: object) {
+        return super.validate(o)
+            && o.hasOwnProperty('errorCode') && (typeof o['errorCode'] === 'number');
+    }
+
     log() {
         console.log(`<ERROR_MSG code='${this.errorCode} : ${this.errorCode.toString()}' string='${ErrorStrings[this.errorCode]}' >`);
     }
