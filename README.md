@@ -4,7 +4,7 @@ This repository contains a simple web application (stock portfolio). This projec
 
 The driving direction during development was *safety*. Both **server** and **client** cannot assume the structure of the messages they receive. That is why I validate all incoming JSON objects as valid **MSG** definitions before use. These definitions are shared between **server** and **client**.
 
-This is the result of my first 6 hours with **Typescript**. This document will layout it's features and shortcomings.
+This is the result of my first time with **Typescript**. This document will layout it's features and shortcomings.
 
 ## Features
 - **Angular SPA Front-End** (Custom Components, Two-way Data Binding, Sending Requests to Servers, Handling Errors, etc.)
