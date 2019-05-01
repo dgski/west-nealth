@@ -18,8 +18,6 @@ export class DataManager {
 
     createPortfolio() : number {
         let newUserIntId = this.getNextUserIntId()
-        let newPortfolio = new Portfolio()
-
         this.portfolios.set(newUserIntId, new Portfolio())
 
         return newUserIntId
