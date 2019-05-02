@@ -84,7 +84,6 @@ export class StockListComponent implements OnInit {
         return
       }
       let resMsg: comm.GET_PORTFOLIO_MSG_REPLY = r
-      console.log(resMsg)
       this.portfolio.stocks = resMsg.portfolio.stocks
     })
   }
